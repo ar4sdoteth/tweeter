@@ -6,6 +6,7 @@
   align-items: center;
   height: 400px;
   width: 100%;
+  
   background-color:rgb(95, 95, 95);
   background-image: url(../images/connected.png);
 }

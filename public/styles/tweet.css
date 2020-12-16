@@ -8,8 +8,12 @@
 
 #tweet-text {
   display: flex;
-  border-bottom: 5px solid black;
-  width: 100%
+  background-color: #f4f1ec;
+  border: none;
+  line-height: 2vh;
+  width: 90%;
+  outline: none;
+  resize: none;
 }
 
 #tweet-btn {
@@ -23,11 +27,10 @@
   justify-content: space-between;
 }
 
-/* #tweet-text {
-  background-color: #f4f1ec;
-  border: none;
-  line-height: 2vh;
-  width: 90%;
-  outline: none;
-  resize: none;
-} */
+.counter {
+  font-family: Bungee, sans-serif;
+}
+
+.red {
+  color: red;
+}
