@@ -22,6 +22,11 @@ const db = require("./lib/in-memory-db");
 // require it and pass the `db` parameter immediately:
 const DataHelpers = require("./lib/data-helpers.js")(db);
 
+//// Handler prints the tweet Database
+app.get("/tweets.json", (req, res) => {
+  res.json(db);
+});
+
 // Update the dates for the initial tweets (data-files/initial-tweets.json).
 require("./lib/date-adjust")();
 

@@ -21,11 +21,22 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+textarea {
+  display: flex;
+  flex-basis: auto;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .parent {
-   display: flex;
-   flex-direction: row;
- }
+
+ .container {
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: #545149; */
+}
