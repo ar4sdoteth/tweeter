@@ -22,3 +22,12 @@
   display: flex;
   justify-content: space-between;
 }
+
+/* #tweet-text {
+  background-color: #f4f1ec;
+  border: none;
+  line-height: 2vh;
+  width: 90%;
+  outline: none;
+  resize: none;
+} */

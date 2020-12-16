@@ -32,6 +32,9 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -53,17 +56,32 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corporis consequuntur quibusdam expedita itaque eos veniam enim ducimus possimus vitae, nisi quia autem nam nemo nihil, officiis deserunt quas suscipit?</p>
-    <section class="new-tweet">
+      <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form method="POST" action="/tweets/">
+        <form method="POST" action="/tweets/">
         <!-- <label for="tweet-text" >What are you humming about?</label> -->
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="row">
             <button id="tweet-btn" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
+  <script>
+    $(document).ready(function() {
+      console.log(`Ready Document One`)
+      // Select the id to assign the event listener 
+      // Use "input" so it update on every char change
+      $("#tweet-text").on("input", function () {
+        // Length is the value of #text-tweet chars
+        let length = $(this).val().length;
+        // Grab the value of counter 
+        let counter = $(".counter");
+        counter.val(140 - length);
+      })
+    });
+
+  </script>
 </html>
