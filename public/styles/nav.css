@@ -9,6 +9,9 @@
   justify-content: space-between;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .navbar .logo {
