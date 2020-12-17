@@ -30,10 +30,10 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
+    <!-- App Tweet Handling JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     
-    <!-- App JS -->
+    <!-- App Counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
@@ -67,21 +67,9 @@
             </div>
           </form>
     </section>
-    <section class="tweet-box">
-      <article class="border">
-        <div>
-          <header class="row">
-            <p>displayName</p>
-            <p class="userName">@userName</p>
-          </header>
-            <p name="tweetBoxText" class="tweet-text">"This is the submitted tweet" </p>
-          <footer>## time</footer>
-        </div>
-
-    </article>
+    <section id="tweets-container" class="tweet-box">
     </section>
         </div>
-      
     </main>
   </body>
   <script>

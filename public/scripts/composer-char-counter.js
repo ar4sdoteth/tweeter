@@ -1,7 +1,7 @@
 console.log(`composer-char-counter loaded`)
 
 $(document).ready(function() {
-  console.log(`Ready Document One`)
+  console.log(`Ready Composer One`)
   // Select the id to assign the event listener 
   // Use "input" so it update on every char change
   $("#tweet-text").on("input", function () {

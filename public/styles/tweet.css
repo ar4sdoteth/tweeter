@@ -9,14 +9,18 @@
 .tweet-text {
   display: flex;
   background-color: #f4f1ec;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   border: none;
   border-bottom: solid black;
+  margin-top: 0;
+  margin-bottom: 0;
   line-height: 2vh;
   width: 100%;
   outline: none;
   resize: none;
+  /* word-wrap: normal;
+  word-break: normal; */
 }
 
 .border {
