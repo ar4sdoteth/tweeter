@@ -33,16 +33,16 @@ const data = [
 
 $(document).ready(function() {
   console.log(`Ready Client Document One`)
-  
+  // Loops through an array of tweets 
+  // to createTweetElement
   const renderTweets = (tweetArray) => {
     for (let eachTweet of tweetArray) {
       $tweetObj = createTweetElement(eachTweet);
-      // return $($tweetObj);
     }
   }
 
-
-  // Create hardcoded tweets && HTML Markup
+  // Creates dynamic tweets via HTML Markup
+  // to the #tweets-container id in index.html
   const createTweetElement = (tweetObj) => {
     let $tweet = $(` 
     <article class="border">
@@ -55,7 +55,6 @@ $(document).ready(function() {
         <footer class="timeDisplay">${tweetObj.created_at}</footer>
       </div>
     </article>`);
-    // return $($tweet);
     $('#tweets-container').append($tweet);
   }
   const $tweet = renderTweets(data);
