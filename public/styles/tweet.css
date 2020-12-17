@@ -57,6 +57,10 @@ article:hover .userName {
   width: 100%
 }
 
+.red {
+  color: red;
+}
+
 .counter {
   font-family: Bungee, sans-serif;
 }
