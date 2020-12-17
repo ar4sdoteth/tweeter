@@ -52,7 +52,7 @@ $(document).ready(function() {
           <p class="userName">${tweetObj.user.handle}</p>
         </header>
           <p name="tweetBoxText" class="tweet-text">${tweetObj.content.text}</p>
-        <footer>${tweetObj.created_at}</footer>
+        <footer class="timeDisplay">${tweetObj.created_at}</footer>
       </div>
     </article>`);
     // return $($tweet);
