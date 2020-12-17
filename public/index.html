@@ -56,17 +56,32 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corporis consequuntur quibusdam expedita itaque eos veniam enim ducimus possimus vitae, nisi quia autem nam nemo nihil, officiis deserunt quas suscipit?</p>
-      <section class="new-tweet">
+      <section class="tweet-box">
       <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets/">
-        <!-- <label for="tweet-text" >What are you humming about?</label> -->
-        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <div class="row">
-            <button id="tweet-btn" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
+        <div>
+          <form method="POST" action="/tweets/">
+          <textarea name="text" class="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div class="row">
+              <button id="tweet-btn" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+    </section>
+    <section class="tweet-box">
+      <article class="border">
+        <div class="width95">
+          <header class="row">
+            <p>displayName</p>
+            <p class="userName">@userName</p>
+          </header>
+            <p name="tweetBoxText" class="tweet-text">"This is the submitted tweet" </p>
+          <footer>## time</footer>
+        </div>
+
+    </article>
+    </section>
+        </div>
+      
     </main>
   </body>
   <script>
