@@ -23,6 +23,8 @@
   border: solid black;
   margin-top: 2em;
   margin-bottom: 2em;
+  padding-left: 5%;
+  padding-right: 5%;
 
 }
 
@@ -42,11 +44,7 @@ article:hover .userName {
 .row {
   display: flex;
   justify-content: space-between;
-}
-
-.width95 {
-  margin: auto;
-  width: 95%;
+  width: 100%
 }
 
 .counter {
