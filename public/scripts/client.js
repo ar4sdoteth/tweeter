@@ -57,5 +57,15 @@ $(document).ready(function() {
     </article>`);
     $('#tweets-container').append($tweet);
   }
+  
+  // Use ajax to send form && prevent
+  // page reload
+  $("form").submit(function(event) {
+    event.preventDefault();
+    $.ajax({ type: "POST", url: "/tweets", data: $(this).serialize() })
+    .then(console.log("It works!"));
+  });
+
   const $tweet = renderTweets(data);
+
 });
