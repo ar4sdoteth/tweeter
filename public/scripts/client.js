@@ -46,19 +46,23 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
 
-    
     const targetValue = $(this).find("input").val();
     console.log(`target value`, targetValue)
-
+    // if blah blah blah slide down error
+    
     if (targetValue.length > 140) {
-      return alert("Too many characters")
+      $('#error').slideDown();
+      $('#error').html("🤐 There is such a thing as *over-sharing*. Dial it back a bit.");
+
     } else if (targetValue < 1) {
-      return alert("Please, write... something")
+      // return alert("Please, write... something")
+      $('#error').slideDown();
+      $('#error').html("Please, write... something");
+
     } else {
       $.ajax({ type: "POST", url: "/tweets", data: $(this).serialize() })
       .then(console.log("AJAX post tweet"))
       .then(loadTweets())
-      // .catch
     }
   });
 

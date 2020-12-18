@@ -8,17 +8,23 @@ $(document).ready(function() {
 
     // Length is the value of #text-tweet chars
     let length = $(this).val().length;
+    console.log($(this).val())
 
     // Grab the value of counter
     let counter = $(".counter");
     counter.val(140 - length);
 
-    // Change the counter to red if negative
+    // Change the counter to red if
+    // they are over the character limit
     console.log(length)
     if (length > 140) {
       counter.addClass("red");
+
     } else if (length < 141) {
       counter.removeClass("red");
+      $('#error').slideUp(1000);
+    } else if (length > 0) {
+      $('#error').slideUp(1000);
     }
   })
 

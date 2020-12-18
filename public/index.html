@@ -55,12 +55,12 @@
   
     <!-- Page-specific (main) content here -->
     <main class="container">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corporis consequuntur quibusdam expedita itaque eos veniam enim ducimus possimus vitae, nisi quia autem nam nemo nihil, officiis deserunt quas suscipit?</p>
       <section class="tweet-box">
+      <p id="error" class="red"></p>
       <h2>Compose Tweet</h2>
         <div>
           <form method="POST" action="/tweets/">
-          <input name="text" class="tweet-text" placeholder="What are you humming about?"></input>
+          <input name="text" class="tweet-text" id="tweet-text-box" placeholder="What are you humming about?"></input>
             <div class="row">
               <button id="tweet-btn" type="submit">Tweet</button>
               <output name="counter" class="counter" for="tweet-text">140</output>
