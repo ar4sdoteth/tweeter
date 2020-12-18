@@ -7,6 +7,14 @@ console.log(`client.js loaded`)
 
 $(document).ready(function() {
   console.log(`Ready Client Document One`)
+  
+  // Filtering text for XSS prevention
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   // Loops through an array of tweets 
   // to createTweetElement
   const renderTweets = (tweetArray) => {
@@ -26,7 +34,7 @@ $(document).ready(function() {
           <p>${tweetObj.user.name}</p>
           <p class="userName">${tweetObj.user.handle}</p>
         </header>
-          <p name="tweetBoxText" class="tweet-text">${tweetObj.content.text}</p>
+          <p name="tweetBoxText" class="tweet-text">${escape(tweetObj.content.text)}</p>
         <footer class="timeDisplay">${tweetObj.created_at}</footer>
       </div>
     </article>`);
@@ -37,6 +45,7 @@ $(document).ready(function() {
   // page reload
   $("form").submit(function(event) {
     event.preventDefault();
+
     
     const targetValue = $(this).find("input").val();
     console.log(`target value`, targetValue)
@@ -47,7 +56,7 @@ $(document).ready(function() {
       return alert("Please, write... something")
     } else {
       $.ajax({ type: "POST", url: "/tweets", data: $(this).serialize() })
-      .then(console.log("AJAX workz"))
+      .then(console.log("AJAX post tweet"))
       .then(loadTweets())
       // .catch
     }
