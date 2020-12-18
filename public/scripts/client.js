@@ -37,15 +37,18 @@ $(document).ready(function() {
   // page reload
   $("form").submit(function(event) {
     event.preventDefault();
+    
     const targetValue = $(this).find("input").val();
     console.log(`target value`, targetValue)
+
     if (targetValue.length > 140) {
       return alert("Too many characters")
     } else if (targetValue < 1) {
       return alert("Please, write... something")
     } else {
       $.ajax({ type: "POST", url: "/tweets", data: $(this).serialize() })
-      .then(console.log("AJAX workz"));
+      .then(console.log("AJAX workz"))
+      .then(loadTweets())
       // .catch
     }
   });

@@ -22,13 +22,11 @@ $(document).ready(function() {
     }
   })
 
-  // $(".tweet-text").on("submit", () => {
-  //   if (length > 140) {
-  //     return alert("Too many characters")
-  //   } else if (length < 1 || length === null || length === "") {
-  //     return alert("Please, write... something")
-  //   }
-
-
-  // })
+  $(".tweet-text").on("submit", () => {
+    if (length > 140) {
+      return alert("Too many characters")
+    } else if (length < 1 || length === null || length === "") {
+      return alert("Please, write... something")
+    }
+  })
 });
