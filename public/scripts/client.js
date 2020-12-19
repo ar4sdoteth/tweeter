@@ -86,11 +86,11 @@ $(document).ready(function() {
     // Error prompts
     if (targetValue.length > 140) {
       $('#error').slideDown();
-      $('#error').html("🤐 There <b>is</b> such a thing as <i>over</i>sharing. Dial it back a bit.");
+      $('#error').html(`<i class="far fa-meh fa-1x">  Talk less. Say more.</i><i class="far fa-meh fa-1x"></i>`);      
 
     } else if (targetValue < 1) {
       $('#error').slideDown();
-      $('#error').html("Please, write <i>something</i>(!)");
+      $('#error').html(`<i class="far fa-meh fa-1x">  Say something...</i><i class="far fa-meh fa-1x"></i>`);
 
     } else {
       $.ajax({ type: "POST", url: "/tweets", data: $(this).serialize() })

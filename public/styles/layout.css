@@ -31,6 +31,7 @@ html {
   
   #error {
     text-align: center;
+    font: smaller;
   }
   
   /*
@@ -68,7 +69,5 @@ html {
 
   div.break {
     display: flex;
-    
-    /* align-items: center; */
   }   
 } 

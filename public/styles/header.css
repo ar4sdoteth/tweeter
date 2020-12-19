@@ -16,10 +16,6 @@ header.header {
   height: 100vh;
 }
 
-/* .image {
-  position: fixed;
-} */
-
 /* Displays avatar && name in a box on the left */
 @media only screen and (min-width: 1024px) {
   header.header {
