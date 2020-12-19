@@ -13,30 +13,34 @@ html {
 /*
  * Global layout stuff
  */
-
-body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-textarea {
-  display: flex;
-  flex-basis: auto;
-}
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
-
- .container {
-  display: flex;
-  margin-left: 5%;
-  margin-right: 5%;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  /* background-color: #545149; */
-}
+ body {
+   color: #545149;
+   background-color: #f4f1ec;
+   font-size: 24px;
+   font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  textarea {
+    display: flex;
+    flex-basis: auto;
+  }
+  
+  header h2 {
+    color: white;
+  }
+  
+  /*
+  * Additional CSS can be defined below or in other CSS files, as per instructions
+  */
+  
+  /* breakpoints for smartphone && tablet  */
+  @media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .container {
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+ }

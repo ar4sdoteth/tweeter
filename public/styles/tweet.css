@@ -9,8 +9,8 @@
 .tweet-text {
   display: flex;
   background-color: #f4f1ec;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
   border: none;
   border-bottom: solid black;
   margin-top: 0;
@@ -18,9 +18,9 @@
   line-height: 1.25em;
   width: 100%;
   outline: none;
-  overflow-y:hidden;
+  overflow-y: auto;
   resize: none;
-  word-wrap:normal;
+  word-wrap: normal;
   word-break: break-word;
 }
 
@@ -64,12 +64,20 @@ article:hover {
   font-weight: bolder;
   box-shadow: 5px 10px;
 }
-article:hover .userName {
+div:hover .userName {
   opacity: 0.5;
   font-weight: normal;
 }
 
+div:hover .icons {
+  opacity: 0.75;
+}
+
 .userName {
+  opacity: 0;
+}
+
+.icons {
   opacity: 0;
 }
 

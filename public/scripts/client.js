@@ -7,7 +7,10 @@ console.log(`client.js loaded`)
 
 $(document).ready(function() {
   console.log(`Ready Client Document One`)
+
+  // Hide the error display on load
   $('#error').slideUp(0);
+
   // Filtering text for XSS prevention
   const escape =  function(str) {
     let div = document.createElement('div');
@@ -18,6 +21,8 @@ $(document).ready(function() {
   // Loops through an array of tweets 
   // to createTweetElement
   const renderTweets = (tweetArray) => {
+    $('#tweets-container').empty()
+
     for (let eachTweet of tweetArray) {
       console.log(`each tweet`, eachTweet)
       $tweetObj = createTweetElement(eachTweet);
@@ -47,16 +52,15 @@ $(document).ready(function() {
           <div>
             <p class="timeDisplay">${tweetTime}</p>
           </div>
-          <div>
-            <i class="far fa-bookmark"></i>
-            <i class="far fa-share-square"></i>
+          <div class="icons">
+            <i class="far fa-flag"></i>
+            <i class="fas fa-retweet"></i>
             <i class="far fa-heart"></i>
           </div>
-
         </footer>
       </div>
     </article>`);
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
   }
 
   // Use ajax to send form && prevent
@@ -64,7 +68,7 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
 
-    const targetValue = $(this).find("input").val();
+    const targetValue = $(this).find("textarea").val();
     console.log(`target value`, targetValue)
     // if blah blah blah slide down error
     

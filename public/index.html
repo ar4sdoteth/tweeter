@@ -42,6 +42,10 @@
     
     <!-- App Counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <!-- Disable Viewport Zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
   </head>
 
   <body>
@@ -51,12 +55,12 @@
       <span>Write a new tweet</span>
     </nav >
     <header class="header">
-      <div>
+      <div class="header-pad">
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-        <h2>Your Name</h2>
+        <h2>Ashley Barr</h2>
       </div>
     </header>
   
@@ -67,7 +71,7 @@
       <h2>Compose Tweet</h2>
         <div>
           <form method="POST" action="/tweets/">
-          <input name="text" class="tweet-text" id="tweet-text-box" placeholder="What are you humming about?"></input>
+          <textarea name="text" class="tweet-text"  placeholder="What are you humming about?"></textarea>
             <div class="row">
               <button id="tweet-btn" type="submit">Tweet</button>
               <output name="counter" class="counter" for="tweet-text">140</output>
