@@ -18,7 +18,9 @@
   line-height: 1.25em;
   width: 100%;
   outline: none;
+  overflow-y:hidden;
   resize: none;
+  word-wrap:normal;
   word-break: break-word;
 }
 

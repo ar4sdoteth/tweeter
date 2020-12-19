@@ -7,7 +7,7 @@ console.log(`client.js loaded`)
 
 $(document).ready(function() {
   console.log(`Ready Client Document One`)
-  
+  $('#error').slideUp(0);
   // Filtering text for XSS prevention
   const escape =  function(str) {
     let div = document.createElement('div');

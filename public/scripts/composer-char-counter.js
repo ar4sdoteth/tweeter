@@ -5,6 +5,8 @@ $(document).ready(function() {
   // Select the id to assign the event listener 
   // Use "input" so it update on every char change
   $(".tweet-text").on("input", function () {
+    // change the height of the text box (stretch)
+    // $('.tweet-text')[0].scrollHeight;
 
     // Length is the value of #text-tweet chars
     let length = $(this).val().length;
