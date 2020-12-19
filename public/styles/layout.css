@@ -49,7 +49,7 @@ html {
   }
  /* } */
 
-/* "Compose tweet" centering for smartphones */
+/* Justify key text for small screens */
  @media only screen and (max-width: 500px) {
   h2 {
     text-align: center;
@@ -57,6 +57,14 @@ html {
   textarea {
     text-align: center;
   }
+}
+
+@media only screen and (min-width: 900) {
+  .nav {
+    background-color:rgb(240, 162, 66);
+    background-image: url(../images/connected.png);
+  }
+  
 }
 
 /* @media only screen and (min-width: 900px) {
