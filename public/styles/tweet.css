@@ -15,10 +15,32 @@
   border-bottom: solid black;
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 2vh;
+  line-height: 1.25em;
   width: 100%;
   outline: none;
   resize: none;
+  word-break: break-word;
+}
+
+.avatar {
+  margin:0.5em;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  width:100%;
+}
+
+p.tweet-header {
+  padding-left: 0.5em;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .border {

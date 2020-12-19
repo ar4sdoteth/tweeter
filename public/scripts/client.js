@@ -27,15 +27,33 @@ $(document).ready(function() {
   // Creates dynamic tweets via HTML Markup
   // to the #tweets-container id in index.html
   const createTweetElement = (tweetObj) => {
+    const avatar = "far fa-meh fa-2x";
+    const tweetTime = moment(tweetObj.created_at).fromNow(true);
+    console.log(`tweet time`, tweetTime)
     let $tweet = $(` 
     <article class="border">
       <div>
         <header class="row">
-          <p>${tweetObj.user.name}</p>
-          <p class="userName">${tweetObj.user.handle}</p>
+        <div class="tweet-header">
+          <i class="${escape(avatar)}"></i>
+          <p class="tweet-header">${escape(tweetObj.user.name)}</p>
+        </div>
+        <div>
+          <p class="userName">${escape(tweetObj.user.handle)}</p>
+        </div>
         </header>
           <p name="tweetBoxText" class="tweet-text">${escape(tweetObj.content.text)}</p>
-        <footer class="timeDisplay">${tweetObj.created_at}</footer>
+        <footer class="tweet-footer">
+          <div>
+            <p class="timeDisplay">${tweetTime}</p>
+          </div>
+          <div>
+            <i class="far fa-bookmark"></i>
+            <i class="far fa-share-square"></i>
+            <i class="far fa-heart"></i>
+          </div>
+
+        </footer>
       </div>
     </article>`);
     $('#tweets-container').append($tweet);
@@ -52,12 +70,11 @@ $(document).ready(function() {
     
     if (targetValue.length > 140) {
       $('#error').slideDown();
-      $('#error').html("🤐 There is such a thing as *over-sharing*. Dial it back a bit.");
+      $('#error').html("🤐 There <b>is</b> such a thing as <i>over-sharing</i>. Dial it back a bit.");
 
     } else if (targetValue < 1) {
-      // return alert("Please, write... something")
       $('#error').slideDown();
-      $('#error').html("Please, write... something");
+      $('#error').html("Please, write <i>something</i>(!)");
 
     } else {
       $.ajax({ type: "POST", url: "/tweets", data: $(this).serialize() })
