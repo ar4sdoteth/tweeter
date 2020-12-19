@@ -6,12 +6,16 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
+### Desktop Layout
 !["Desktop Layout"](https://github.com/ar4sdoteth/tweeter/blob/master/public/images/desktop_layout.png?raw=true)
 
+### Tablet Layout
 !["Tablet Layout"](https://github.com/ar4sdoteth/tweeter/blob/master/public/images/tablet_layout.png?raw=true)
 
+### Mobile Header
 !["Mobile Header"](https://github.com/ar4sdoteth/tweeter/blob/master/public/images/mobile_header.png?raw=true)
 
+### Tweet Boxes
 !["Tweet Box"](https://github.com/ar4sdoteth/tweeter/blob/master/public/images/mobile_scroll-hover.png?raw=true)
 
 ## Getting Started
