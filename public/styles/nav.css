@@ -32,11 +32,10 @@
     justify-content: space-around;
   }
 }
-
-@media only screen and (max-width: 900px) {
+/* Change navbar appearence for small screens */
+@media only screen and (max-width: 1024px) {
   .navbar {
     background-color:rgb(240, 162, 66);
     background-image: url(../images/connected.png);
   }
-  
 }

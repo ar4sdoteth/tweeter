@@ -57,34 +57,37 @@
         <i class="fas fa-angle-double-down fa-1x" id="start-tweet"></i>
       </div>
     </nav >
-    <header class="header">
-      <div class="header-pad">
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-        <h2>Expressionless User</h2>
-      </div>
-    </header>
-  
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="tweet-box">
-      <p id="error" class="red"></p>
-      <h2>Compose Tweet</h2>
-        <div>
-          <form method="POST" action="/tweets/">
-          <textarea name="text" class="tweet-text"  placeholder="What are you humming about?"></textarea>
-            <div class="row">
-              <button id="tweet-btn" type="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
-            </div>
-          </form>
-    </section>
-    <section id="tweets-container" class="tweet-box">
-    </section>
+    <div class="break">
+      <header class="header">
+        <div class="header-pad">
+            <img src="/images/profile-hex.png"> 
         </div>
-    </main>
+        <br>
+        <div>
+          <h2>Expressionless User</h2>
+        </div>
+      </header>
+    
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="tweet-box">
+        <p id="error" class="red"></p>
+        <h2>Compose Tweet</h2>
+          <div>
+            <form method="POST" action="/tweets/">
+            <textarea name="text" class="tweet-text"  placeholder="What are you humming about?"></textarea>
+              <div class="row">
+                <button id="tweet-btn" type="submit">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text">140</output>
+              </div>
+            </form>
+      </section>
+      <section id="tweets-container" class="tweet-box">
+      </section>
+          </div>
+      </main>
+
+    </div>
   </body>
   <script>
   </script>
