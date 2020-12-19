@@ -4,12 +4,21 @@ header.header {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-self: flex-start;
   align-items: center;
   height: 400px;
   width: 100%;
   background-color:rgb(240, 162, 66);
   background-image: url(../images/connected.png);
 }
+
+.header-wrapper {
+  height: 100vh;
+}
+
+/* .image {
+  position: fixed;
+} */
 
 /* Displays avatar && name in a box on the left */
 @media only screen and (min-width: 1024px) {
