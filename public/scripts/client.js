@@ -74,7 +74,7 @@ $(document).ready(function() {
     
     if (targetValue.length > 140) {
       $('#error').slideDown();
-      $('#error').html("🤐 There <b>is</b> such a thing as <i>over-sharing</i>. Dial it back a bit.");
+      $('#error').html("🤐 There <b>is</b> such a thing as <i>over</i>sharing. Dial it back a bit.");
 
     } else if (targetValue < 1) {
       $('#error').slideDown();

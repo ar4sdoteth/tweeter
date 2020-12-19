@@ -29,12 +29,16 @@ html {
     color: white;
   }
   
+  #error {
+    text-align: center;
+  }
+  
   /*
   * Additional CSS can be defined below or in other CSS files, as per instructions
   */
   
-  /* breakpoints for smartphone && tablet  */
-  @media only screen and (min-width: 320px) and (max-width: 1024px) {
+  /* breakpoints for Devices */
+  /* @media only screen and (min-width: 320px) and (max-width: 899px) { */
   .container {
     display: flex;
     margin-left: 5%;
@@ -43,4 +47,21 @@ html {
     justify-content: center;
     flex-direction: column;
   }
- }
+ /* } */
+
+/* "Compose tweet" centering for smartphones */
+ @media only screen and (max-width: 500px) {
+  h2 {
+    text-align: center;
+  }
+  textarea {
+    text-align: center;
+  }
+}
+
+/* @media only screen and (min-width: 900px) {
+  header.header {
+    display: flex;
+    flex-direction: column;
+  }
+}  */
