@@ -64,14 +64,15 @@ article:hover {
   font-weight: bolder;
   box-shadow: 5px 10px;
 }
-div:hover .userName {
-  opacity: 0.5;
-  font-weight: normal;
+
+article:hover .userName {
+opacity: 0.5;
+font-weight: normal;
 }
 
-div:hover .icons {
+article:hover .icons {
   opacity: 0.75;
-}
+} 
 
 .userName {
   opacity: 0;
