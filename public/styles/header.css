@@ -1,5 +1,5 @@
 
-.header {
+header.header {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -7,6 +7,6 @@
   height: 400px;
   width: 100%;
   
-  background-color:rgb(95, 95, 95);
+  background-color:rgb(240, 162, 66);
   background-image: url(../images/connected.png);
 }

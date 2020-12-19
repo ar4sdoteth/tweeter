@@ -8,6 +8,11 @@ console.log(`client.js loaded`)
 $(document).ready(function() {
   console.log(`Ready Client Document One`)
 
+  // Event handler to initiate tweet
+  $('#start-tweet').click(function() {
+    $('textarea').focus();
+  });
+
   // Hide the error display on load
   $('#error').slideUp(0);
 
