@@ -33,7 +33,7 @@
   }
 }
 /* Change navbar appearence for small screens */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .navbar {
     background-color:rgb(240, 162, 66);
     background-image: url(../images/connected.png);
